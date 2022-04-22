@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+h1, h2 {
+  margin: 10 0px;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+h2 {
+  text-align: left;
+  margin-left: 200px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+img {
+  height: 380px;
+  width: 380px;
+  max-width: 1000px;
+  margin: 10px;
+}
+.text {
+  text-align: left;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-left: 60px;
+  width: auto;
+  font-family: Roboto,Helvetica,Arial,sans-serif;
+}
+
+.price {
+  text-align: left;
+  color: red;
+  width: auto;
+  margin-left: 60px;
+}
+.product:hover {
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 20px;
+  z-index: 1;
+  transition: 1s;
+}
+.price1{
+  margin-left: -60px;
+}
+
+
+
