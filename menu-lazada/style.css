@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+.logo img {
+    display: block;
+    margin: auto;
+    width: 127px;
+    height: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.container {
+    max-width: 1320px;
+    background: rgb(23, 56, 147);
+    margin: auto;
+    display: flex;
+    font-size: 14px;
+}
+.menu {
+    position: relative; /* lấy làm điểm mốc của menu lv2 */
+    width: 200px;
+    height: 442px;
+}
+.menu, ul .menu, .sub-menu {
+    background: #fff;
+    margin: 0;
+    padding:0;
+    list-style: none;
+    box-shadow: 0 0 2px 0 rgb(0 0 0 / 25%);
+}
+.sub-menu {
+    list-style: none;
+}
+.menu a {
+    text-decoration: none;
+    color: #757575;
+    padding: 5px;
+    display: block;
+}
+.menu li {
+    margin: 10px 0;
+}
+.menu li:hover >a {
+    color: #f36d00;
+    background: #efeaea;
+}
+li:hover {
+    color: #f36d00;
+}
+.sub-menu {
+    /*opacity: value ( 0 - 1); /* làm mở */
+    display: none;/* không hiển thị lên nữa (mất hẳn) */
+    position: absolute; /* làm phần tử nổi lên khỏi mặt phẳng */
+    z-index: 1; /* phần tử nào có z lớn hơn thì sẽ nổi lên trước phần tử có z nhỏ hơn đối với 2 phần tử có absolute */
+    top: 0px;
+    left: 200px;
+}
+.menu li:hover .sub-menu {
+    display: block;
+}
+.sub-menu a {
+    white-space: nowrap;/* Văn bản chỉ ở trên 1 dòng */
+    background: #fff;
+}
+.sub-menu {
+    width: 200px;
+    height: 442px;
+}
+ li >a{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
