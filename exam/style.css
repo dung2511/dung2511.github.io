@@ -7,7 +7,7 @@ body {
 }
 .title {
     max-width: 100%;
-    background: url(/image-gallery-2/images/background.jpg);
+    background: url(/exam/images/background.jpg);
     display: flex;
     justify-content:center ;
     height: 200px;
