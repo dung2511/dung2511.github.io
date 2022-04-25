@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color: #161414;
+    font-family: Inter,sans-serif;
+}
+.music {
+    max-width: 100%;
+}
+.single {
+    display: flex;
+    justify-content: start;
+}
+.avatar img {
+    max-width: auto;
+    width: 80px;
+    margin-left: 20px;
+    
+}
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.list .text {
+    color: #ffffff;
+    text-align: left;
+    max-width: 100%;
+    width: 220px;
+
+}
+.text p {
+    color: rgba(255, 255, 255, 0.5);
+    text-align: left;
+    margin-left: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.list img {
+    width: 260px;
+    height: 260px;
+}
+h2 {
+    color: #ffffff;
+    margin-left: 20px;
+    font-size: 20px;
+}
+img {
+    border: 0px #d4d4d4 solid;
+    padding: 7px;
+    border-radius:  5%;
+    -moz-border-radius: 5%;
+    -webkit-border-radius: 5%;
+}
+h3 {
+    font-size: 14px;
+    margin-left: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.namesingle p {
+    color: #ffffff;
+}
+.list .items .img:hover {
+    transition:.7s;
+    transform: scale(1.05);
+}
+.items .text h3:hover {
+    color: #c662ef;
+    transition:.7s;
+    text-decoration: underline;
+}
+.items .text p:hover {
+    color: #c662ef;
+    transition:.7s;
+    text-decoration: underline;
+}
+.fan .text p:hover {
+    color: #c662ef;
+    transition:.7s;
+    text-decoration: underline;
+}
+.avatar:hover {
+    transition:.7s;
+    transform: scale(1.1);
+}
