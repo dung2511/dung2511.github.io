@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: rgb(167, 115, 47);
+    width: 1080px;
+}
+h1 {
+    text-align: center;
+}
+.container {
+    display: flex;
+    margin: 30px;
+}
+img {
+    height: 300px;
+    width: 260px;
+    max-width: 1320px;
+    margin: 10px;
+    object-fit: cover;
+}
+.detail {
+    padding-top: 100px;
+    justify-content: flex-end;
+    margin: 0 40px;
+}
+a {
+    border: 1px solid blue;
+}
