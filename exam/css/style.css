@@ -3,7 +3,8 @@
 }
 body {
     max-width: 1320px;
-    margin: 0;
+    margin: auto;/* căn giữa bài */
+    /* cách khác bỏ max-width, để margin:0 */
 }
 .title {
     max-width: 100%;

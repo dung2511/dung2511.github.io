@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body {
-    margin: 0;
+    margin: auto;
     background: rgb(167, 115, 47);
     width: 1080px;
 }
