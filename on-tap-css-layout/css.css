@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin:0;
+}
+.container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+}
+img {
+    max-width: 100%;
+}
+.item {
+    display: flex;
+    margin: 15px 0;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 15%);
+    min-height: 100px;
+}
+.content {
+    width: 70%;
+}
+.timeable {
+    display: flex;
+    justify-content: space-between;
+}
+.damo {
+    background-color: #fe6d3f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+.year {
+    background-color: #ef5321;
+    display: flex;
+    justify-content: center;
+    height: 20px;
+}
+.left {
+    width: 15%;
+}
+.right {
+    width: 85%;
+    padding:0 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+.sign a {
+    color: #3c78e8;
+    font-weight: 300;
+    text-decoration: none;
+}
+.schedule a {
+    color: #464646;
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 20px;
+}
+.address {
+    margin: 15px 0 15px 15px;
+    width: 35%;
+}
+.container > a {
+    text-decoration: none;
+    color: #464646;
+    margin: 15px 0;
+}
+.class-time {
+    background-color: #4b96f2;
+}
+.class-year {
+    background-color: #2682f2;
+}
+.class-time1 {
+    
+    background-color: #fbbc05;
+}
+.class-year1 {
+    background-color: #f89707;
+}
