@@ -1,20 +1,19 @@
 // Bài 4:
 function translate(str) {
-    let 
     switch (str) {
-      case vn:
+      case 'vn':
         console.log("Xin Chào");
         break;
-      case fr:
+      case 'fr':
         console.log("Salut");
         break;
-      case ge:
+      case 'ge':
         console.log('Hallo');
         break;
-      case jp:
+      case 'jp':
         console.log("Kon'nichiwa");
         break;
-      case kr:
+      case 'kr':
         console.log("yeoboseyo");
   }
 }
