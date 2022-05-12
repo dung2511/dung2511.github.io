@@ -12,45 +12,95 @@
       function numberMax(a, b) {
         if (typeof a == "number" && typeof b == "number") {
           if (a > b) {
-            console.log(a);
+            return a;
           } else {
-            console.log(b);
+            return b;
           }
         } else {
-          console.log("Tham số không hợp lệ");
+          return "Tham số không hợp lệ";
         }
       }
 
       // Bài 2:
       function factorial(n) {
         let calFactorial = 1;
-        if (n >= 0) {
-          for (let i = 1; i <= n; i++) {
+        if (Number.isInteger(n) && n >= 0) {
+          for (let i = 2; i <= n; i++) {
             calFactorial *= i;
           }
           return calFactorial;
         }
         if (n < 0) {
-          console.log("Tham số không hợp lệ");
+          return "Tham số không hợp lệ";
         }
       }
 
       // Bài 3:
       function score(x) {
         if (x >= 8.5 && x <= 10) {
-          console.log("Điểm A");
+          return "Điểm A";
         }
-        if (x >= 7 && x <= 8.5) {
-          console.log("Điểm B");
+        if (x >= 7 && x < 8.5) {
+          return "Điểm B";
         }
-        if (x >= 5.5 && x <= 7) {
-          console.log("Điểm C");
+        if (x >= 5.5 && x < 7) {
+          return "Điểm C";
         }
-        if (x >= 4 && x <= 5.5) {
-          console.log("Điểm D");
+        if (x >= 4 && x < 5.5) {
+          return "Điểm D";
         }
-        if (x >= 0 && x <= 4) {
-          console.log("Điểm F");
+        if (x >= 0 && x < 4) {
+          return "Điểm F";
+        }
+      }
+      // cách khác:
+      // function score2(x) {
+      //   if (x >= 8.5) {
+      //     return "Điểm A";
+      //   } else if (x >= 7) {
+      //     return "Điểm B";
+      //   } else if (x >= 5.5) {
+      //     return "Điểm C";
+      //   } else if (x >= 4) {
+      //     return "Điểm D";
+      //   } else if (x >= 0) {
+      //     return "Điểm F";
+      //   }
+      // }
+      // cách khác: vì khi return trả về kết quả rồi thì kết thúc
+      // function score2(x) {
+      //   if (x >= 8.5) {
+      //     return "Điểm A";
+      //   }
+      //   if (x >= 7) {
+      //     return "Điểm B";
+      //   }
+      //   if (x >= 5.5) {
+      //     return "Điểm C";
+      //   }
+      //   if (x >= 4) {
+      //     return "Điểm D";
+      //   }
+      //   if (x >= 0) {
+      //     return "Điểm F";
+      //   }
+      // }
+      
+      // Bài 4:
+      function translate(str) {
+        switch (str) {
+          case "fr":
+            return "Salut";
+          case "ge":
+            return "Hallo";
+          case "jp":
+            return "Kon'nichiwa";
+          case "kr":
+            return "yeoboseyo";
+          case "es":
+            return "Hola";
+          default:
+            return "Xin Chào";
         }
       }
     </script>
