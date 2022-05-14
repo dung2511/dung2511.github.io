@@ -45,30 +45,28 @@
       }
 
       // Bài 2:
-      function student() {
-        let students = [
-          "Thao",
-          "Phương",
-          "Tien Anh",
-          "Đạt",
-          "Tùng",
-          "Long",
-          "Hậu",
-          "Mạnh",
-          "Dũng",
-          "Nam Anh",
-          "Linh",
-          "Quỳnh",
-        ];
-        let restudents;
+      function student(students) {
+        // let students = [
+        //   "Thao",
+        //   "Phương",
+        //   "Tien Anh",
+        //   "Đạt",
+        //   "Tùng",
+        //   "Long",
+        //   "Hậu",
+        //   "Mạnh",
+        //   "Dũng",
+        //   "Nam Anh",
+        //   "Linh",
+        //   "Quỳnh",
+        // ];
+        let restudents = students.sort();
         for (i = 0; i < students.length; i++) {
-          restudents = students.sort();
           document.write("<p>" + (i + 1) + ". " + restudents[i] + "</p>");
         }
       }
       // Bài 3:
-      function evenNumber() {
-        let arr = [1, 2, 3, 4, 5, 6];
+      function evenNumber(arr) {
         let array = [];
         for (let i in arr) {
           if (arr[i] % 2 === 0) {
@@ -77,16 +75,16 @@
         }
         return array;
       }
-      // Bài 3: với 1 mảng bất kì 
-    //   function evenNumber(arr) {
-    //     let array = [];
-    //     for (let i in arr) {
-    //       if (arr[i] % 2 === 0) {
-    //         array.push(arr[i]);
-    //       }
-    //     }
-    //     return array;
-    //   }
+      // Bài 3: với 1 mảng bất kì
+      //   function evenNumber(arr) {
+      //     let array = [];
+      //     for (let i in arr) {
+      //       if (arr[i] % 2 === 0) {
+      //         array.push(arr[i]);
+      //       }
+      //     }
+      //     return array;
+      //   }
       // Bài 4:
       function minNumber(arr) {
         return Math.min(...arr);
