@@ -27,12 +27,23 @@
       }
       // Bài 2
       function longestString(arr){
-        let max = arr[0];
-        for ( let i in arr){
-            if ( max.length < arr[i].length){
-                max = arr[i];
-            }
-        } return max;
+        let max = [];
+        let maxLength = 0;
+        // Tạo vòng lặp chạy qua từng phần tử của arr
+        for ( let i = 0; i < arr.length; i++){
+            if ( maxLength < arr[i].length){
+              // Mỗi lần maxLength < arr[i].length thì mảng của max để rỗng
+                max = [];
+                // Đẩy phần tử arr[i] vào trong max
+                max.push(arr[i]);
+                // Gắn mới độ dài maxLength = với độ dài của arr[i]
+                maxLength = arr[i].length;
+                // Nếu maxLenth = arr[i].length thì đẩy arr[i] vào trong max
+            } else if(maxLength === arr[i].length){
+          max.push(arr[i]);
+        }
+        }
+        return max;
     }
       // Bài 3:
       function average(students) {
