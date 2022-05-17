@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập xử lý mảng và object</title>
+  </head>
+  <body>
+    <script>
+      // Bài 1:
+      function userInformation(user) {
+        let kq;
+        if (
+          user.username != "" &&
+          user.username.length <= 20 &&
+          user.password.length >= 6 &&
+          user.password.length <= 32 &&
+          user.password === user.confirm
+        ) {
+          kq = "Pass";
+          return kq;
+        } else {
+          kq = "Fail";
+          return kq;
+        }
+      }
+      // Bài 2
+      function longestString(arr){
+        let max = arr[0];
+        for ( let i in arr){
+            if ( max.length < arr[i].length){
+                max = arr[i];
+            }
+        } return max;
+    }
+      // Bài 3:
+      function average(students) {
+        let avg = 0;
+        let avgs;
+        for (let i = 0; i < students.length; i++) {
+          avg += students[i].age;
+        }
+        avgs = avg / students.length;
+        return avgs;
+      }
+    </script>
+  </body>
+</html>

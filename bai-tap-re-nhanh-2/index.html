@@ -8,7 +8,7 @@
   </head>
   <body>
     <script>
-      // Bài 1:
+      // Bài 1: để kiểm thử đúng hay sai có thể đổi thời gian ở máy tính đi hoặc có thể date(month) để kiếm tra tham số month chạy có đúng hay
       function date() {
         let kq;
         let now = new Date(); // Lấy thời gian hiện tại
@@ -18,7 +18,7 @@
         if (month >= 1 && month <= 3) {
           kq = " Mùa Xuân";
         } else if (month >= 4 && month <= 6) {
-          kq = " Mùa Hè";
+          kq = " Mùa Hạ";
         } else if (month >= 7 && month <= 9) {
           kq = " Mùa Thu";
         } else {
@@ -44,25 +44,24 @@
         );
       }
 
-      // Bài 2:
+      // Bài 2: let students = [
+      //                 "Thao",
+      //                 "Phương",
+      //                 "Tien Anh",
+      //                 "Đạt",
+      //                 "Tùng",
+      //                 "Long",
+      //                 "Hậu",
+      //                 "Mạnh",
+      //                 "Dũng",
+      //                 "Nam Anh",
+      //                 "Linh",
+      //                 "Quỳnh",
+      //               ];
       function student(students) {
-        // let students = [
-        //   "Thao",
-        //   "Phương",
-        //   "Tien Anh",
-        //   "Đạt",
-        //   "Tùng",
-        //   "Long",
-        //   "Hậu",
-        //   "Mạnh",
-        //   "Dũng",
-        //   "Nam Anh",
-        //   "Linh",
-        //   "Quỳnh",
-        // ];
-        let restudents = students.sort();
+        let restudents = students.sort(); // nếu để restudents trong vòng lặp thì nó sẽ lặp nhiều lần nó sẽ sắp xếp nhiều lần sẽ ko đạt hiệu năng cao, nên để hàm sắp xếp ở ngoài
         for (i = 0; i < students.length; i++) {
-          document.write("<p>" + (i + 1) + ". " + restudents[i] + "</p>");
+          document.write("<p>" + (i + 1) + ". " + restudents[i] + "</p>"); // nếu (i+1) thay bằng (i++) thì nó trước khi in ra màn hình i =0; sau khi in ra màn hình i =1 nó sẽ tiếp tục vòng lặp với i = 2 không phải bằng 1 nữa vì khi lặp i đã có giá trị = 1 rồi
         }
       }
       // Bài 3:
@@ -87,7 +86,7 @@
       //   }
       // Bài 4:
       function minNumber(arr) {
-        return Math.min(...arr);
+        return Math.min(...arr);// ... nghĩa là phép duỗi mảng thành các phần tử
       }
     </script>
   </body>
