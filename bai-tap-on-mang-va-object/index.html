@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập ôn tập mảng và object</title>
+  </head>
+  <body>
+    <script>
+      // Bài 1:
+      function convert(str) {
+        // tạo 1 biến có giá trị bằng tham số truyền vào dùng hàm split đưa tham số vào mảng
+        let array = str.split(" ");
+        for (let i = 0; i < array.length; i++) {
+        // biến array tại vị trí i trong từng phần tử của mảng array, phần tử thứ i sẽ có kí tự đầu tiên của phần tử viết hoa 
+        // và kí tự còn lại viết thường
+          array[i] = array[i][0].toUpperCase() + array[i].slice(1).toLowerCase();
+        }
+        return array.join(" ");
+      }
+
+      // Bài 2:
+      function str(str) {
+        // tạo 1 biến dùng hàm split cho biến str vào trong mảng để không còn dấu cách, dùng hàm join nối mảng đó thành chuỗi
+        // rồi lại dùng hàm split để để biến đó vào mảng, dùng reverse để đảo ngược lại mảng đó và dùng hàm join nối mảng thành chuỗi
+        // theo cách này vì nếu ko dùng split 2 thì khi chuỗi có dấu cách thì sẽ đảo ngược những từ được phân cách buổi dấu ' '
+        // chứ không phải đảo ngược từng kí tự trong chuỗi đó
+        let stri = str
+          .split(" ")
+          .join("")
+          .split("")
+          .reverse()
+          .join("")
+          .toLowerCase();
+        // tương tự dùng split và join để loại bỏ dấu ' ' nếu trong chuỗi có dấu ' ' nếu có
+        let strin = str.split(" ").join("").toLowerCase();
+        if (stri === strin) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      // Bài 3:
+      function ageArrangement(object) {
+        function arrangement(a, b) {
+          return b.age - a.age;
+        }
+        return object.sort(arrangement);
+      }
+      // Bài 4:
+      function information(students) {
+        // tạo biến arr có giá trị là mảng rỗng
+        let arr = [];
+        for (let i = 0; i < students.length; i++) {
+        // nếu tham số truyền vào ở vị trị i có .name[0] (kí tự đầu tiên của thuộc tính name) = 'h' or 'H' thì
+          if (students[i].name[0] === "h" || students[i].name[0] === "H") {
+            // đẩy giá trị students ở vị trí i vào biến arr
+            arr.push(students[i]);
+          }
+        }
+        return arr;
+      }
+    </script>
+  </body>
+</html>
