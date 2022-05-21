@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra Javascrip cơ bản</title>
+</head>
+<body>
+    <script>
+        // Bài 1:
+        function temperature(c){
+            // độ F = độ C * 1.8 + 32
+            let f = c*1.8+32;
+            return f;
+        }
+        // Bài 2:
+        function numbers(num){
+            let number = [];
+            // Dùng hàm sort để sắp xếp vị trí mảng
+            num.sort(function(a,b){
+                return b - a;
+            })
+            // dùng vòng lặp chạy qua từng phần tử trong mảng đã sắp xếp
+            for(let i = 0; i < num.length; i++){
+                // nếu số lớn nhất không trùng thì ta push những số nhỏ hơn nó vào mảng mới
+                if(num[0]>num[i+1]){
+                    number.push(num[i+1]);
+                }
+            }
+            // return số đầu tiên của mảng mới vì nó là số nhỏ thứ 2 của mảng cũ
+            return number[0];
+        }
+        // Bài 3:
+        function longestString(arr){
+            let array = [];
+            let arrayLength = 0;
+            for(let i = 0; i < arr.length; i++){
+                if(arrayLength < arr[i].length){
+                    array=[];
+                    array.push(arr[i]);
+                    arrayLength = arr[i].length;
+                } else if (arrayLength = arr[i].length){
+                    array.push(arr[i]);
+                }
+            } return array;
+        }
+        // Bài 4:
+        function stringEnd(str, target){
+            let result;
+            if(result = str.endsWith(target) && target != '' ){
+                return true;
+            } else {
+                return false;
+            }
+        }
+        // Bài 5: 
+        function checkArray(array){
+            for(let i = 0; i < array.length; i++){
+                // indexOf trả về vị trị đầu tiên của phần tử array[i] và lastIndexOf trả về vị trí cuối cùng của array[i]
+                // nếu indexOf = lastIndexOf nghĩa là chỉ có 1 phần tử array[i] vì chỉ có 1 phần tử nên trả về kết quả cùng vị trí 
+                // nếu indexOf != lastIndexOf nghĩa là phần tử array[i] có xuất hiện ở vị trí khác nữa nên trả về vị trí khác nhau
+                if(array.indexOf(array[i]) !== array.lastIndexOf(array[i])){
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
