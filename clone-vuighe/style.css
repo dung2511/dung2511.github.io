@@ -19,7 +19,6 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
   margin-top: -10px;
   margin-left: -5px;
   margin-right: -5px;
@@ -90,11 +89,12 @@ img {
 .col-12 {
   width: 100%;
 }
-
 section {
   margin-bottom: 60px;
 }
-
+.container1 {
+  padding: 60px 0;
+}
 .section-header {
   margin-bottom: 10px;
   font-size: 24px;
@@ -422,6 +422,8 @@ a {
 }
 .cartoon-button-play {
   display: none;
+  top: 10px;
+  left: 10px;
 }
 
 .cartoon:hover .cartoon-button-play {
