@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="clock">
+
+    </div>
+    <script>
+        const clock = document.querySelector('.clock')
+        function ticktock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString(
+                "vi",
+                {
+                    timeZone:"short",
+                    weekday:"long",
+                    day:"2-digit",
+                    month:"long",
+                    year:"numeric",
+                    hour:"2-digit",
+                    minute:"2-digit",
+                    second:"2-digit"
+                }
+            );
+            clock.textContent = timeString;
+        }
+        ticktock;
+        setInterval(ticktock, 1000);
+    </script>
+</body>
+</html>

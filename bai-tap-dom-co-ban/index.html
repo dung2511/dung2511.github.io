@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Modify List</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+
+        <ul>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+        </ul>
+
+        <ul>
+            <li>🥲</li>
+            <li>🥰</li>
+        </ul>
+
+        <script>
+            // lấy toàn bộ thẻ ul
+           const ul = document.querySelectorAll("ul");
+           // duyệt qua từng thẻ li trong toàn bộ thẻ ul
+           for(const li of ul){
+               // lấy thẻ li đầu tiên trong ul
+               const firstItem = li.firstElementChild;
+               // lấy thẻ li cuối cùng trong ul
+               const lastItem = li.lastElementChild;
+               // chuyển thẻ li first về cuối
+               li.append(firstItem);
+               // chuyển thẻ li last lên đầu
+               li.prepend(lastItem);
+
+           }
+        firstItem.classList.add('highlight')
+        lastItem.classList.add('highlight')
+
+        const box = document.querySelector('.box');
+        let width = 100;
+        function expand(){
+            width +=10;
+            box.style.Width = width += "px";
+        }
+        setInterval(expand, 1000);
+        
+        </script>
+    </body>
+</html>
