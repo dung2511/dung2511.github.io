@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="fullname">Tên đầy đủ của you</label>
+      <input
+        name="fullname"
+        id="fullname"
+        placeholder="Tên Người Dùng"
+        type="text"
+      />
+      <label for="password">Nhập mât khẩu vô đây</label>
+      <input
+        name="password"
+        id="password"
+        placeholder="Nhập Mật Khẩu"
+        maxlength="10"
+        type="password"
+      />
+      <label for="avatar">Chọn avatar của bạn vô đây</label>
+      <input name="avatar" id="avatar" type="file" />
+      <input type="range" />
+      <label for="age">Ngày sinh của you</label>
+      <input name="age" type="number" />
+      <label for="birthday">Ngày sinh của you</label>
+      <input name="birthday" type="date" />
+
+      <input name="answer" id="a1" type="radio" value="1" checked />
+      <label for="a1">1</label>
+      <input name="answer" id="a2" type="radio" value="2" />
+      <label for="a2">a</label>
+
+      <input name="question" id="c1" type="checkbox" value="a" />
+      <label for="c1">a</label>
+      <input name="question" id="c2" type="checkbox" value="b" checked />
+      <label for="c2">b</label>
+
+      <label for="city">Thành Phố Bạn Sống</label>
+      <select name="city" id="city" multiple size="2">
+        <option value="vi">Hà Nội</option>
+        <option value="us">New York</option>
+        <option value="jp">Tokyo</option>
+        <option value="cn">Bejing</option>
+      </select>
+      <label for="note">Bạn có điều gì muốn nói</label>
+      <textarea name="note" id="note" cols="30" rows="10"> </textarea>
+      <button>Click chuột vô đây</button>
+    </form>
+  </body>
+</html>

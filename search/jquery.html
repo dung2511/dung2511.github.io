@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="score">Điểm</label>
+    <input type="number" id="score" />
+    <button type="button" id="btn">OK</button>
+    <div id="rank"></div>
+    <script>
+      let inputScore = $("#score");
+      let btn = $("#btn");
+      let resultTag = $("#rank");
+      btn.on("click", function () {
+        let score = inputScore.val();
+        let result = "";
+        let color;
+        if (score >= 6 && score <= 8) {
+          result = "giỏi";
+          color = "green";
+        } else if (score >= 4 && score < 6) {
+          result = "khá";
+          color = "yellow";
+        } else {
+          result = "trượt";
+          color = "red";
+        }
+        resultTag.html(`<p style="color:${color}">${result}</p>`)
+      });
+    </script>
+    <script>
+      function sum(){
+    let product = [
+        {
+          id: 1,
+          name: 'product1',
+          price: 50
+        },
+        {
+          id: 2,
+          name: 'product2',
+          price: 60
+        },
+        {
+          id: 1,
+          name: 'product3',
+          price: 35
+        },
+      ];
+    //   let sum = 0;
+    // for (let i = 0; i < product.length; i++){
+    //    sum += product[i].price;
+    // }
+    // return sum;
+    let sum = product.reduce(function(prev, cur){
+        return(prev + cur.price);
+    })
+}
+    </script>
+  </body>
+</html>

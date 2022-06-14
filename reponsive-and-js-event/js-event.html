@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS event</title>
+  </head>
+  <body>
+    <select name="city" id="city">
+      <option value="" selected disabled hidden>---Chọn Tỉnh---</option>
+    </select>
+    <select name="huyen" id="huyen">
+      <option value="" selected disabled hidden>---Chọn Huyện---</option>
+    </select>
+    <select name="xa" id="xa">
+      <option value="" selected disabled hidden>---Chọn Xã---</option>
+    </select>
+    <button id="click">OK</button>
+    <div id="confirm"></div>
+
+    <script>
+      let tinhTp = {
+        "Hà Nội": {
+          "Thanh Oai": ["Bích Hòa", "Bình Minh", "Cao Viên"],
+          "Thường Tín": ["Tự Nhiên", "Hồng Vân", "Chương Dương"],
+        },
+        "Hải Phòng": {
+          "An Dương": ["An Đồng", "An Hòa", "An Hưng"],
+          "An Lão": ["An Tân", "An Hòa", "An Trung"],
+        },
+      };
+      let option = "";
+      for (let tinh in tinhTp) {
+        document.getElementById(
+          "city"
+        ).innerHTML += `<option value="${tinh}">${tinh}</option>`;
+      }
+      document.getElementById("city").onchange = function (event) {
+        let huyens = tinhTp[event.target.value];
+        document.getElementById(
+          "huyen"
+        ).innerHTML = `<option value="" selected disabled hidden>---Chọn Huyện---</option>`;
+        for (huyen in huyens) {
+          document.getElementById(
+            "huyen"
+          ).innerHTML += `<option value="${huyen}">${huyen}</option>`;
+        }
+      };
+      document.getElementById("huyen").onchange = function (event) {
+        let selectTinh = document.getElementById("city").value;
+        let huyens = tinhTp[selectTinh];
+        let xas = huyens[event.target.value];
+        document.getElementById(
+          "xa"
+        ).innerHTML = `<option value="" selected disabled hidden>---Chọn Xã---</option>`;
+        for (xa of xas) {
+          document.getElementById(
+            "xa"
+          ).innerHTML += `<option value="${xa}">${xa}</option>`;
+        }
+      };
+
+      document.getElementById("click").onclick = function () {
+        const city = document.querySelector("#city");
+        const huyen = document.querySelector("#huyen");
+        const xa = document.querySelector("#xa");
+        document.getElementById("confirm").innerHTML =
+          "Thành Phố: " + city.value+ " - Huyện: " + huyen.value + " - Xã: " + xa.value;
+      };
+    </script>
+  </body>
+</html>

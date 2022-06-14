@@ -1,0 +1,79 @@
+*{
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+}
+.container {
+    margin: 0;
+}
+label, select {
+    width: 100%;
+}
+.col-1 {
+    width: 8.333333%;
+  }
+  
+  .col-2 {
+    width: 16.666667%;
+  }
+  
+  .col-3 {
+    width: 25%;
+  }
+  
+  .col-4 {
+    width: 33.333333%;
+  }
+  
+  .col-5 {
+    width: 41.666667%;
+  }
+  
+  .col-6 {
+    width: 50%;
+  }
+  
+  .col-7 {
+    width: 58.333333%;
+  }
+  
+  .col-8 {
+    width: 66.666667%;
+  }
+  
+  .col-9 {
+    width: 75%;
+  }
+  
+  .col-10 {
+    width: 83.333333%;
+  }
+  
+  .col-11 {
+    width: 91.666667%;
+  }
+  
+  .col-12 {
+    width: 100%;
+  }
+  .d-flex {
+    display: flex;
+  }
+  .j-around {
+    justify-content: space-around;
+  }
+  .j-between {
+    justify-content: space-between;
+  }
+  .j-end{
+    justify-content: flex-end;
+  }
+  .filter {
+    margin: 10px;
+  }
+  #select{
+    border: 1px solid gray;
+    /* display: none; */
+  }
+  

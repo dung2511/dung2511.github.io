@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <td>Name</td>
+        <td>price</td>
+        <td>số lượng</td>
+      </thead>
+      <tbody id="sx"></tbody>
+    </table>
+    <span
+      ><button>Tổng</button>
+      <div id="money"></div
+    ></span>
+
+    <script>
+      let product = [
+        {
+          id: 1,
+          name: "product1",
+          price: 50,
+          qty: 1,
+        },
+        {
+          id: 2,
+          name: "product2",
+          price: 60,
+          qty: 3,
+        },
+        {
+          id: 1,
+          name: "product3",
+          price: 35,
+          qty: 3,
+        },
+      ];
+      for (let i in product) {
+        document.getElementById("sx").innerHTML += `<tr>
+          <td>${product[i].name}</td>
+          <td>${product[i].price}</td>
+          <td>${product[i].qty}</td>
+        </tr>`;
+      }
+     function calcTotal(){
+        const total = 
+     }
+    </script>
+  </body>
+</html>
