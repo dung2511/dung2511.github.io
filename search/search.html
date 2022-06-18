@@ -30,24 +30,61 @@
       <form id="select" action="">
         <div class="col-12 d-flex j-around">
           <div class="col-2">
-            <label for="wages">Mức Lương</label>
-            <select id="wages"></select>
+            <div class="label">
+              <label for="">Mức lương</label>
+            </div>
+            <select name="" id="saraly" class="box">
+              <option value="">Tất cả</option>
+              <option value="3.000.000">Từ 3.000.000 đ</option>
+              <option value="5.000.000">Từ 5.000.000 đ</option>
+              <option value="7.000.000">Từ 7.000.000 đ</option>
+              <option value="10.000.000">Từ 10.000.000 đ</option>
+              <option value="15.000.000">Từ 15.000.000 đ</option>
+            </select>
           </div>
           <div class="col-2">
-            <label for="ranks">Cấp Bậc</label>
-            <select id="ranks"></select>
+            <div class="label">
+              <label for="">Cấp bậc</label>
+            </div>
+            <select name="" id="rank" class="box">
+              <option value="">Tất cả</option>
+              <option value="Sinh viên">Sinh viên</option>
+              <option value="Nhân viên">Nhân viên</option>
+              <option value="Quản lý">Quản lý</option>
+              <option value="Mới tốt nghiệp">Mới tốt nghiệp</option>
+            </select>
           </div>
           <div class="col-2">
-            <label for="posted">Đăng trong vòng</label>
-            <select id="posted"></select>
+            <div class="label">
+              <label for="">Đăng trong vòng</label>
+            </div>
+            <select name="" id="timeUp" class="box">
+              <option value="">Tất cả</option>
+              <option value="3 ngày trước">3 ngày trước</option>
+              <option value="1 tuần trước">1 tuần trước</option>
+              <option value="2 tuần trước">2 tuần trước</option>
+              <option value="1 tháng trước">1 tháng trước</option>
+            </select>
           </div>
           <div class="col-2">
-            <label for="form">Hình thức việc làm</label>
-            <select id="form"></select>
+            <div class="label">
+              <label for="">Hình thức việc làm</label>
+            </div>
+            <select name="" id="typeCompany" class="box">
+              <option value="">Tất cả</option>
+              <option value="NV chính thức">Nhân viên chính thức</option>
+              <option value="Tạm thời">Tạm thời/ dự án</option>
+              <option value="Thời vụ">Thời vụ - Tự do</option>
+              <option value="Thực tập">Thực tập</option>
+            </select>
           </div>
           <div class="col-2">
-            <label for="welfare">Phúc lợi mong muốn</label>
-            <select id="welfare"></select>
+            <div class="label">
+              <label for="">Phúc lợi mong muốn</label>
+            </div>
+            <select name="" id="" class="box">
+              <option value="">Tất cả</option>
+            </select>
           </div>
         </div>
         <div class="col-12 d-flex j-end filter">
@@ -59,79 +96,24 @@
           </div>
         </div>
       </form>
-
-      <script>
-        let option = "";
-        const wages = [
-          "Tất Cả",
-          "3.000.000 đ",
-          "5.000.000 đ",
-          "7.000.000 đ",
-          "10.000.000 đ",
-        ];
-        for (let wage of wages) {
-          document.getElementById(
-            "wages"
-          ).innerHTML += `<option>${wage}</option>`;
-        }
-        const ranks = [
-          "Tất cả",
-          "Sinh Viên/ Thực tập sinh",
-          "Mới tốt nghiệp",
-          "Nhân viên",
-          "Trưởng Nhóm/Giám sát",
-          "Quản lý",
-          "Quản lý cấp cao",
-          "Điều hành cấp cao",
-        ];
-        for (let rank of ranks) {
-          document.getElementById(
-            "ranks"
-          ).innerHTML += `<option>${rank}</option>`;
-        }
-        const posted = [
-          "Tất cả",
-          "3 Ngày trước",
-          "1 tuần trước",
-          "2 tuần trước",
-          "3 tuần trước",
-        ];
-        for (let post of posted) {
-          document.getElementById(
-            "posted"
-          ).innerHTML += `<option>${post}</option>`;
-        }
-        const forms = [
-          "Tất cả",
-          "Nhân viên chính thức",
-          "Tạm thời/ Dự án",
-          "Thời vụ/ Nghề tự do",
-          "Thực tập",
-        ];
-        for (let form of forms) {
-          document.getElementById(
-            "form"
-          ).innerHTML += `<option>${form}</option>`;
-        }
-        const welfares = [
-          "Tất cả",
-          "Chế Độ Bảo Hiểm",
-          "Du lịch",
-          "Chế độ thưởng",
-          "Chăm sóc sức khỏe",
-          "Đào tạo",
-        ];
-        for (let welfare of welfares) {
-          document.getElementById(
-            "welfare"
-          ).innerHTML += `<option>${welfare}</option>`;
-        }
-        function click() {
-          document.getElementById("select").style.display = "block";
-        }
-      </script>
-
-      
+      <div class="body" style="top: 100px">
+        <div class="container">
+          <table>
+            <thead>
+              <tr>
+                <th>Tên công ty</th>
+                <th>Công việc</th>
+                <th>Mức lương</th>
+                <th>Chức vụ</th>
+                <th>Thời gian đăng</th>
+                <th>Hình thức việc làm</th>
+              </tr>
+            </thead>
+            <tbody id="content"></tbody>
+          </table>
+        </div>
+      </div>
     </div>
+    <script src=".js"></script>
   </body>
 </html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <button>add</button>
+    <table id="table">
+      <div id="main"></div>
+      <caption>
+        thông tin khách hàng
+      </caption>
+      <thead>
+        <tr>
+          <th>descreiption</th>
+          <th>id</th>
+          <th>name</th>
+          <th>pice</th>
+          <th>acction</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </body>
+  <script>
+    fetch("https://628b4592667aea3a3e2b48e5.mockapi.io/product")
+      .then((response) => response.json())
+      .then((data) => {
+        $("#main").html();
+        let newList = data
+          .map((a) => {
+            return ` 
+       <tr>
+                    <td>${a.description}</td>
+                    <td>${a.id}</td>
+                    <td>${a.name}</td>
+                    <td>${a.pice}</td>
+                    <td><button>add</button>
+                    <button>delete</button></td>
+                    
+                </tr>`;
+          })
+          .join(",")
+          .replaceAll(/,/g, " ");
+        document.querySelector("tbody").innerHTML = newList;
+      });
+      
+  </script>
+</html>
